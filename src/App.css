@@ -1,38 +1,100 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form{
+  transform: translateY(-30px);
+  width: 100%;
+  height: 100vh;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 20px;
+  color: rgb(196, 98, 98);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.form h1{
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 40px !important;
+  padding-bottom: 40px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-data{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-data input{
+  width: 60%;
+  height: 30px;
+  padding: 2px;
+  padding-left: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: aliceblue;
+}
+
+.form-data div{
+  transform: translateY(-15px) !important;
+}
+
+#agree{
+  transform: translateY(6px) !important;
+  width: 20px;
+  height: 20px;
+  background: none;
+  box-shadow: white;
+}
+
+.submit{
+  background-color: rgb(196, 98, 98) !important;
+  font-size: 18px;
+  align-items: center;
+  width: 25% !important;
+  color: rgb(13, 7, 7);
+  height: 14% !important;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.submit:hover{
+  color: rgb(253, 253, 253);
+  background-color: rgb(115, 105, 105);
+}
+
+.display{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-image: linear-gradient(to bottom left, brown, #6b417f) !important;
+  color: #fff;
+}
+
+.card{
+  width: 235px;
+  height: 225px;
+  background-color: #d5c1c1;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  margin-left: 50px;
+  color: black;
+  padding: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
 }

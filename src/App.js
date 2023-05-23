@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Form from './Components/Form';
+import Display from './Components/Display';
 
 function App() {
+  const [data, setData] = useState([]);
+  
+  const addData = (newData) => {
+    setData((prevData) => [...prevData, newData]);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form addData={addData} />
+      <Display data={data} />
     </div>
   );
 }
